@@ -1,0 +1,135 @@
+.main {
+  @include large {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: repeat(6, auto);
+    grid-gap: 20px;
+    height: 100vh;
+  }
+}
+.main_primaryInfo primaryInfo{
+  background-color: yellow;
+  grid-area: a;
+}
+.primaryInfo__fileInfo{
+  background-color:red;
+  grid-area: b;
+}
+.small-articles{
+  background-color:blue;
+  grid-area:d;
+}
+.abonnement{
+  background-color:brown;
+  grid-area:e;
+}
+.rdv{
+  background-color:blueviolet;
+  grid-area:f;
+}
+.primaryInfo__article{
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:2vh;
+    .primaryInfo__photo{
+      max-width:90vw;
+    }
+  .primaryInfo__title{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+  }
+}
+.article__infos{
+  text-align: center;
+  margin-top: 1vh;
+  p{
+    text-align: center;
+    display: inline;
+    color:#999;
+  }
+}
+.mainArticles{
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+  .mainArticle__photo{
+    width: 90vw;
+  }
+  .mainArticle__title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+.mainArticle__title--abonné{
+  display: flex;
+}
+.smallArticles{
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  .smallArticle{
+    display: flex;
+    margin-top: 2vh;
+    .smallArticle__photo{
+      height:100px;
+      margin-right: 2vw;
+    }
+    h3{
+      font-size: 1.2rem;
+      line-height: 1.5rem;;
+    }
+    .mainArticle__title--abonné{
+      padding-top:2.5vh;
+      #picto-abo{
+        height:20px;
+        float:left;
+        margin: 0;
+      }
+      h3{
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+.abonnement{
+  margin-top: 2vh;
+  background-color: #fed500;
+  height: 12vh;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rdvArticles{
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+  .rdvArticle{
+    margin-top: 2vh;
+  }
+  .rdvArticle__photo{
+    width: 90vw;
+  }
+  .rdvArticle__title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .rdvArticle__infos{
+    text-align: center;
+  margin-top: 1vh;
+  p{
+    text-align: center;
+    display: inline;
+    color:#999;
+  }
+}
+.rdvArticle__title--abonné{
+  display:flex;
+}
+}
