@@ -7,26 +7,6 @@
     height: 100vh;
   }
 }
-.main_primaryInfo primaryInfo{
-  background-color: yellow;
-  grid-area: a;
-}
-.primaryInfo__fileInfo{
-  background-color:red;
-  grid-area: b;
-}
-.small-articles{
-  background-color:blue;
-  grid-area:d;
-}
-.abonnement{
-  background-color:brown;
-  grid-area:e;
-}
-.rdv{
-  background-color:blueviolet;
-  grid-area:f;
-}
 .primaryInfo__article{
     width: 90vw;
     margin-left: auto;
@@ -56,17 +36,26 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 2vh;
+  max-width:600px;
   .mainArticle__photo{
     width: 90vw;
+    max-width: 600px;
   }
   .mainArticle__title{
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
   }
+  
 }
 .mainArticle__title--abonné{
   display: flex;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+  max-width:600px;
+   
 }
 .smallArticles{
   width: 90vw;
@@ -133,3 +122,18 @@
   display:flex;
 }
 }
+.main {
+  @include medium {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "primaryInfo primaryInfo primaryInfo primaryInfo primaryInfo primaryInfo"
+                         "mainArticle__1 mainArticle__1 mainArticle__2 mainArticle__2 mainArticle__3 mainArticle__3"
+                         "mainArticle__4 mainArticle__4 mainArticle__4 mainArticle__5 mainArticle__5 mainArticle__5"
+                         "smallArticles smallArticles smallArticles smallArticles smallArticles smallArticles"
+                         "abonnement abonnement abonnement abonnement abonnement abonnement"
+                         "rdvArticle__1 rdvArticle__1 rdvArticle__2 rdvArticle__2 rdvArticle__3 rdvArticle__3"
+  }
+  
+}
+
